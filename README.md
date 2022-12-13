@@ -1,6 +1,6 @@
 # MedicalCard project
 
-URL of application: 
+URL of application: https://72f57a1a-a9be-4bf2-b053-42b3055d8832.website.yandexcloud.net/final/index.html
 
 ### Technological stack 
 
@@ -13,9 +13,11 @@ All files in ipfs are encrypted using symmetric encryption.
 In IPFS I store two kinds of files (json): request from patient and response from doctor. Patient's request can access the patients and doctor.
 Doctors response can access thr patient and doctor. 
 
+
+
 ### Functionality
 
-![img.png](sceens/img.png)
+![img.png](sceens/1.png)
 
 App has to roles: 
 
@@ -33,11 +35,11 @@ Patient profile
 The patient enters the app, clicks on `create or get medical record`, types the public address and data for encryption of doctor  who can access his record.
 Basically at this step patient is giving to the specific doctor access to medical record.  
 
-![img_1.png](sceens/img_1.png)
+![img_1.png](sceens/2.png)
 
 Patient clicks the `submit` button, by this he uploads the request file (which is json) to IPFS
 
-![img_2.png](sceens/img_2.png)
+![img_2.png](sceens/3.png)
 
 `not submitted` means that doctor didn't open and make prescription yet. 
 
@@ -45,15 +47,15 @@ Lets switch to doctor's profile
 
 By clicking on `see as doctor` button and typing patients public address he open the medical record. 
 
-![img_3.png](sceens/img_3.png)
+![img_3.png](sceens/4.png)
 
 After that he can write the perception and submit the record app. 
 
-![img_4.png](sceens/img_4.png)
+![img_4.png](sceens/5.png)
 
 Now we can switch back to patient and check that record was signed by doctor. 
 
-![img_5.png](sceens/img_5.png)
+![img_5.png](sceens/6.png)
 
 
 
