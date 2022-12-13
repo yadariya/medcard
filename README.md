@@ -4,9 +4,9 @@ URL of application: https://72f57a1a-a9be-4bf2-b053-42b3055d8832.website.yandexc
 
 ### Technological stack 
 
-Solidity
-React
-IPFS
+- Solidity
+- React
+- IPFS
 
 All files in ipfs are encrypted using symmetric encryption. 
 
