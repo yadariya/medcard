@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# MedicalCard project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+URL of application: 
 
-## Available Scripts
+### Technological stack 
 
-In the project directory, you can run:
+Solidity
+React
+IPFS
 
-### `npm start`
+All files in ipfs are encrypted using symmetric encryption. 
 
-Runs the app in the development mode.\
+In IPFS I store two kinds of files (json): request from patient and response from doctor. Patient's request can access the patients and doctor.
+Doctors response can access thr patient and doctor. 
+
+### Functionality
+
+![img.png](sceens/img.png)
+
+App has to roles: 
+
+First role is the role of patient, patient can open or create medical card by clicking on upper button 
+
+Second role is the role of doctor, doctor can open patient medical record, see the history of records and write the prescription
+
+On photo, you can see the address of person and his public key, this public key is used to get the symmetric key, which is used to decrypt records. 
+
+
+How application works: 
+
+Patient profile 
+
+The patient enters the app, clicks on `create or get medical record`, types the public address and data for encryption of doctor  who can access his record.
+Basically at this step patient is giving to the specific doctor access to medical record.  
+
+![img_1.png](sceens/img_1.png)
+
+Patient clicks the `submit` button, by this he uploads the request file (which is json) to IPFS
+
+![img_2.png](sceens/img_2.png)
+
+`not submitted` means that doctor didn't open and make prescription yet. 
+
+Lets switch to doctor's profile 
+
+By clicking on `see as doctor` button and typing patients public address he open the medical record. 
+
+![img_3.png](sceens/img_3.png)
+
+After that he can write the perception and submit the record app. 
+
+![img_4.png](sceens/img_4.png)
+
+Now we can switch back to patient and check that record was signed by doctor. 
+
+![img_5.png](sceens/img_5.png)
+
+
+
+### For local testing I advise to use hardhat 
+
+Zero step: deploy contract `contract.sol`, put the contact address to `src/web3/index.js`
+
+Firstly, run the hardhat using `hardhat node`
+
+Secondly, run the application using `react-scripts start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
