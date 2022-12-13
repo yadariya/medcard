@@ -162,4 +162,4 @@ class MedicalCardGenerator {
     }
 }
 
-export const generator = new MedicalCardGenerator("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+export const generator = new MedicalCardGenerator("0x4E7563DD93f83AF86C41109E9D0a58aC11D45bAF");
