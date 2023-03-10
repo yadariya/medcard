@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@emotion/styled": "^11.10.6",
     "@fontsource/roboto": "^4.5.8",
     "@metamask/eth-sig-util": "^5.0.2",
     "@mui/lab": "^5.0.0-alpha.111",
